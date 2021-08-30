@@ -1,0 +1,61 @@
+{% block content %}
+
+{% load static %}
+<div class="block-nav">
+  
+  <div class="block-nav2">
+
+    <div class="block-bur">
+      <div class="header_burger">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="block-btn">
+      <a href="/" style="text-decoration: none; color: rgb(61, 61, 61);"><span class="logo-text1">KREVETKA.</span></a>
+      <a href="/" style="text-decoration: none;"><span class="logo-text2">RED</span></a>
+    </div>
+
+    <div class="block-tel">
+      <div data-da=".navigation-btn,700,last" class="tel-info">
+        <span>Москва и Московская область</span><br>
+        <a href="tel:+79039677749">+7 (903) 967-77-49</a>
+      </div>
+    </div>
+
+    <div href="/basket" onclick="location.href='/basket';" class="block-basket">
+      <img class="style-img-basket" src="{% static 'img/basket.png' %}" alt="">
+      <span class="ItemCount ItemCount1"></span>
+    </div>
+
+  </div>
+
+  <div class="navigation-site">
+    <div class="navigation-btn">
+      <a class="btn-nav" href="/fish">Рыба</a>
+      <a class="btn-nav" href="/shrimp">Креветки</a>
+      <a class="btn-nav" href="/seafood">Морепродукты</a>
+      <a class="btn-nav" href="/crab">Краб</a>
+      <a class="btn-nav" href="/caviar">Икра</a>
+      <a class="btn-nav" href="/about">О нас</a>
+      {% if user.is_authenticated %}
+      <div class="dropdown">
+        <div class="dropdown-btn">
+          <div class="dropbtn"><span>Мой профиль</span><img class="img-profileH" src="{% static 'img/profileimg6.png' %}" alt=""></div>
+        </div>
+        <div class="dropdown-content">
+          <div onclick="location.href='/clientprofile';" class="aaa">Мои заказы</div>
+          <div onclick="location.href='/logout';" class="next-n">Выход</div>
+        </div>
+      </div>
+
+      {% else %}
+      <a href="/next" class="btn-nav next-a">Войти</a>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+

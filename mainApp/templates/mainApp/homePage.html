@@ -1,0 +1,100 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+<div class="HomePage">
+   <div class="HomePage2">
+         <div class="text-home-page">
+            <div class="text-home-page2">
+               <span class="title-home-page1">Онлайн-магазин</span>
+               <span class="title-home-page2">рыбы и морепродуктов</span>
+               <div class="home-page-desblo">
+                     <span class="home-page-description">Здесть вы сможете преобрести рыбу, морепродукты, полуфабрикаты и икру премиум качества разных сортов и видов по доступным ценам. Наша продукция подойдет физическим лицам, а так же магазинам и рестораном.</span>
+               </div>
+               <div onclick="location.href='/registration';" class="block-stylebtnhp"><button class="btn stylebtnhp">Стать клиентом</button></div>
+            </div>
+         </div>
+         <div class="img-home-page">         
+            <img class="more-img" src="{% static 'img/more3.png' %}" alt="">       
+         </div>
+   </div>
+   <div class="btn-card-px">
+      <span class="title-nav-home">Каталог товаров</span>
+      <div class="btn-card-px2">
+         <div class="btn-card">
+            <div class="card1">
+               <a href="/fish" class="fish"><img src="{% static 'img/fish.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">РЫБА</span>
+            </div>
+            <div class="card1">
+               <a href="/shrimp" class="shrimp"><img src="{% static 'img/shrimp.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">КРЕВЕТКИ</span>
+            </div>
+            <div class="card1">
+               <a href="/seafood" class="seafood"><img src="{% static 'img/seafood.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">МОРЕПРОДУКТЫ</span>
+            </div>
+         </div>
+         <div class="btn-card">
+            <div class="card1">
+               <a href="/crab" class="crab"><img src="{% static 'img/crab.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">КРАБ</span>
+            </div>
+            <div class="card1">
+               <a href="/caviar" class="caviar"><img src="{% static 'img/caviar.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">ИКРА</span>
+            </div>
+            <div class="card1">
+               <a href="/about" class="about"><img src="{% static 'img/about.png' %}" alt="" class="btn-img"></a>
+               <span class="namebtn">О НАС</span>
+            </div>
+         </div>
+      </div>  
+   </div>
+   <div class="product-top-px">
+      <div class="product-top-px2">
+         <span class="title-product-home1">Выбор покупателей</span>
+         <div class="shop-general">
+            <div class="shop">
+               {%for el in hometop%}
+               <div class="unit shadow-lgn" id="{{el.ProductID}}">
+                  <div class="img-unit"><img src="{{el.Picture.url}}" alt=""></div>
+                  <div class="text-unit">
+                     <span class="nameUnit">{{el.ProductName}}</span>
+                  </div>
+                  <div class="infotext">
+                     <div class="infotext1"><span>{{el.ProductDescription}}</span></div>
+                     <div class="infotext2"><div class="infotext-main1"><span>{{el.ProductDescription2}}</span></div></div>
+                     <div class="rating-px">
+                        <div class="rating rating_set">
+                           <div class="rating_body">
+                              <div class="rating_active"></div>
+                              <div class="rating_items">
+                                 <input type="radio" class="rating_item" value="1" name="rating">
+                                 <input type="radio" class="rating_item" value="2" name="rating">
+                                 <input type="radio" class="rating_item" value="3" name="rating">
+                                 <input type="radio" class="rating_item" value="4" name="rating">
+                                 <input type="radio" class="rating_item" value="5" name="rating">
+                              </div>
+                           </div>
+                           <div class="rating_value">{{el.ProductRating}}</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="yesnoblock">
+                     <input type="radio" class="LL1" name="LL1"  value="Yes" id="r1" checked="checked" /><label class="blocksep bg-light" for="r1">80/100</label>
+                     <input type="radio" class="LL1"  name="LL1"  value="No" id="r2" /><label class="blocksep bg-light" for="r2">90/120</label>
+                  </div>
+                  <div class="btn-unit">
+                     <input type="number" min="1" class="form-control" value="1">
+                     <button class="btn btn-outline-success addtocart" value="{{el.ProductID}}">Добавить</button>
+                     <span class="price">{{el.ProductPrice}} ₽/кг</span>
+                  </div>
+               </div>
+               {%endfor%}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

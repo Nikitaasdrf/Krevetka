@@ -1,0 +1,48 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+
+<div class="clientprofile-px">
+   <div class="clientprofile-px2">
+      <div class="orders-all">
+         <span class="title-profile-client">Заказы в работе</span>
+         <div class="fcp current-orders border-nik">
+            {%for el in ClientInfoNikita%}
+            <div class="co-order">
+               <div class="co-data co-st"><span class="co-wi co-time">{{ el.dateOrder }}</span></div>
+               <div class="co-product co-st"><span class="co-wi">{{ el.prname }}</span></div>
+               <div class="co-weight co-st"><span class="co-wi">{{ el.prcount }} кг</span></div>
+               <div class="co-cheque co-st"><span class="co-wi">{{ el.prprice }} ₽</span></div>
+               <div class="co-status co-st"><span class="co-wi">{{ el.statusOrder }}</span></div>
+            </div>
+            {%endfor%}
+         </div>
+         <span class="title-profile-client">История заказов</span>
+         <div class="fcp order-history border-nik">
+            {%for el in ClientInfoNikitaDone%}
+            <div class="co-order">
+               <div class="co-data co-st"><span class="co-wi">{{ el.dateDone }}</span></div>
+               <div class="co-product co-st"><span class="co-wi">{{ el.prname }}</span></div>
+               <div class="co-weight co-st"><span class="co-wi">{{ el.prcount }} кг</span></div>
+               <div class="co-cheque co-st"><span class="co-wi">{{ el.prprice }} ₽</span></div>
+               <div class="co-status co-st"><span class="co-wi">{{ el.statusOrder }}</span></div>
+            </div>
+            {%endfor%}
+         </div>
+      </div>
+      <div class="profile-and-chat">
+         <span class="title-profile-client">Профиль кулинара</span>
+         <div class="fcp profile-cook border-nik">
+            <div class="name-foto">
+               <div class="name-pc-block"><h4 class="name-pc">{{ user_first_name }}</h4><h4 class="name-pc">{{ user_last_name }}</h4></div>
+               <div class="img-pc-block"><img class="img-pc" src="{% static 'img/profileimg2.png' %}" alt=""></div>
+            </div>
+         </div>
+         <span class="title-profile-client">Чат с администрацией</span>
+         <div class="fcp chat-admin border-nik"></div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

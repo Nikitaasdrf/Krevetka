@@ -1,0 +1,80 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+
+<div class="makingorder-px">
+   <div class="form-makingorder border-nik">
+      <div class="form-makingorder-beforeload">
+         <div class="title-order-m">
+            <span class="title-order-m2">Заполните анкету для оформления заказа</span>
+         </div>
+         <div class="form_red">
+            <span>Ваше имя *</span>
+            <input class="input-text" type="text" id="clientName" value="{{user_first_name}}">
+         </div>
+         <div class="form_red">
+            <span>Ваша фамилия *</span>
+            <input class="input-text" type="text" id="cliensurName" value="{{user_last_name}}">
+         </div>
+         <div class="form_red">
+            <span>Номер телефона *</span>
+            <input class="input-text" type="text" id="clientPhone">
+         </div>
+         <div class="form_red">
+            <span>Email</span>
+            <input class="input-text" type="text" id="clientEmail" value="{{user_email}}">
+         </div>
+         <div class="form_red">
+            <span>Способ получения *</span>
+            <select class="select input-text" type="text" id="DeliveryMethod">
+               <option value="Доставка по Москве" selected>Доставка по Москве</option>
+               <option value="За МКАД до 10км">Доставка за МКАД в пределах 10км</option>
+               <option value="За МКАД более 10км">Доставка за МКАД более 10км</option>
+               <option value="Самовывоз">Самовывоз</option>
+            </select>
+         </div>
+         <div class="address-customer form_red">
+            <span>Адрес</span>
+            <input class="input-text" type="text" id="clientAddress">
+         </div>
+         <div class="info-courier form_red">
+            <span>Что нужно знать курьеру?</span>
+            <textarea class="input-text" type="text"></textarea>
+         </div>
+      </div>
+      <div class="preloader-order"></div>
+      <div class="form-makingorder-afterload" id="form-makingorder-afterload">
+         <span class="title-order-m2">Спасибо за заказ!</span><br><br>
+         <span class="spanorder nameCustomer"></span><span class="spanorder">, номер вашего заказа - </span><span class="spanorder numberOrderId"></span><br>
+         <span class="spanorder">Наш менеджер свяжется с Вами в ближайшее время.</span><br>
+         <a href="/" class="btn btn-warning btnorder">На главную</a>
+         {% if user.is_authenticated %}
+         <a href="/clientprofile" class="btn btn-warning btnorder">Мои заказы</a>
+         {% endif %}
+      </div>
+   </div>
+   <div class="form-order-making border-nik">
+      <div class="title-order">
+         <span class="title-order1">Сумма заказа</span>
+      </div>
+      <div class="final-price-px-making">
+         <div class="final-price-px-making2">
+            <div class="weight">
+               <span class="weight-text fontsize-1-1">Вес заказа</span>
+               <span class="style-margin1 fontsize-1-1"><span class="TotlKg"></span> кг</span>
+            </div>
+            <div class="quantity">
+               <span class="quantity-text fontsize-1-1">Товары</span>
+               <span class="style-margin1 fontsize-1-1"><span class="ItemCount"></span> ед</span>
+            </div>
+            <div class="final-price">
+               <span class="final-price-text fontsize-1-6">Итого</span>
+               <span class="style-margin1 fontsize-1-6"><span class="TotlPrice"></span> ₽</span>
+            </div>
+            <button class="btn stylebtnmak" id="stylebtnmak">Заказать</button>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

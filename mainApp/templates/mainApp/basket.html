@@ -1,0 +1,41 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+<div class="basket-px">
+   <span class="basket-name">В корзине <span class="ItemCount"></span><span class="ItemWord"></span></span>
+   <div class="basket-px2">
+      <div class="form-basket border-nik">
+      </div>
+      <div class="form-order border-nik">
+         <div class="title-order">
+            <img src="{% static 'img/logo.png' %}" alt="" class="img-order">
+            <span class="title-order1">Оформить заказ</span>
+         </div>
+         <div class="final-price-px">
+            <div class="final-price-px2">
+               <div class="weight">
+                  <span class="weight-text fontsize-1-1">Вес заказа</span>
+                  <span class="style-margin1 fontsize-1-1"><span class="TotlKg"></span> кг</span>
+               </div>
+               <div class="quantity">
+                  <span class="quantity-text fontsize-1-1">Товары</span>
+                  <span class="style-margin1 fontsize-1-1"><span class="ItemCount"></span> ед.</span>
+               </div>
+               <div class="final-price">
+                  <span class="final-price-text fontsize-1-6">Итого</span>
+                  <span class="style-margin1 fontsize-1-6"><span class="TotlPrice" id="TotlPriceID"></span> ₽</span>
+               </div>
+               <div class="go-trimley">
+                  <div id="gotoorder" class="btn btn-warning btn-go-trimley">Перейти к оформлению</div>
+               </div>
+               <div class="promo-code">
+                  <input type="text" class="promo-code-in border-nik" placeholder="Промокод на скидку">
+                  <button class="btn stylebtnpromo border-nik">Применить</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+
+<div class="rating rating_set">
+   <div class="rating_body">
+      <div class="rating_active"></div>
+      <div class="rating_items">
+         <input type="radio" class="rating_item" value="1" name="rating">
+         <input type="radio" class="rating_item" value="2" name="rating">
+         <input type="radio" class="rating_item" value="3" name="rating">
+         <input type="radio" class="rating_item" value="4" name="rating">
+         <input type="radio" class="rating_item" value="5" name="rating">
+      </div>
+   </div>
+   <div class="rating_value">3.6</div>
+</div>
+
+
+
+<div class="checkbox-btn-group">
+	<label>
+		<input type="checkbox" id="c1">
+		<span>Checkbox #1</span>
+	</label>
+	<label>
+		<input type="checkbox" id="c2">
+		<span>Checkbox #2</span>
+	</label>
+	<label>
+		<input type="checkbox" id="c3">
+		<span>Checkbox #3</span>
+	</label>
+</div>
+
+
+<div class="chec">
+	<div class="chec1 checs bordR"></div>
+	<div class="chec2 checs bordR"></div>
+	<div class="chec3 checs"></div>
+</div>
+
+<div class="yesnoblock">
+	<input type="radio" class="LL1" name="LL1"  value="Yes" id="r1" checked="checked" /><label class="blocksep bg-light" for="r1">Yes</label>
+	<input type="radio" class="LL1"  name="LL1"  value="No" id="r2" /><label class="blocksep bg-light" for="r2">No</label>
+</div>
+
+{% endblock %}

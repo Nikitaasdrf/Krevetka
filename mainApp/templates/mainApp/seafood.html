@@ -1,0 +1,45 @@
+{% extends "mainApp/index.html" %}
+
+{% load static %}
+{% block content %}
+<div class="shop-general">
+   <div class="shop">
+      {%for el in seafood%}
+      <div class="unit shadow-lgn" id="{{el.ProductID}}">
+         <div class="img-unit"><img src="{{el.Picture.url}}" alt=""></div>
+         <div class="text-unit">
+            <span class="nameUnit">{{el.ProductName}}</span>
+         </div>
+         <div class="infotext">
+            <div class="infotext1"><span>{{el.ProductDescription}}</span></div>
+            <div class="infotext2"><div class="infotext-main1"><span>{{el.ProductDescription2}}</span></div></div>
+            <div class="rating-px">
+               <div class="rating rating_set">
+                  <div class="rating_body">
+                     <div class="rating_active"></div>
+                     <div class="rating_items">
+                        <input type="radio" class="rating_item" value="1" name="rating">
+                        <input type="radio" class="rating_item" value="2" name="rating">
+                        <input type="radio" class="rating_item" value="3" name="rating">
+                        <input type="radio" class="rating_item" value="4" name="rating">
+                        <input type="radio" class="rating_item" value="5" name="rating">
+                     </div>
+                  </div>
+                  <div class="rating_value">{{el.ProductRating}}</div>
+               </div>
+            </div>
+         </div>
+         <div class="yesnoblock">
+            <input type="radio" class="LL1" name="LL1"  value="Yes" id="r1" checked="checked" /><label class="blocksep bg-light" for="r1">80/100</label>
+            <input type="radio" class="LL1"  name="LL1"  value="No" id="r2" /><label class="blocksep bg-light" for="r2">90/120</label>
+         </div>
+         <div class="btn-unit">
+            <input type="number" min="1" class="form-control" value="1">
+            <button class="btn btn-outline-success addtocart" value="{{el.ProductID}}">Добавить</button>
+            <span class="price">{{el.ProductPrice}} ₽/кг</span>
+         </div>
+      </div>
+      {%endfor%}
+   </div>
+</div>
+{% endblock %}

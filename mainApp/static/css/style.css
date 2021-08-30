@@ -1,0 +1,289 @@
+/*################################################### Стили для homePage################################################### */
+.HomePage{display: flex; flex-direction: column; width: 100%; align-items: center;}
+
+/* 1 Страница */
+.HomePage2{display: flex; flex-direction: row; width: 85%; height: 51rem;}
+.text-home-page {display: flex; width: 45%;}
+.text-home-page2 {display: flex; flex-direction: column; margin: 9rem 0 0 5rem;}
+.title-home-page1 {font-size: 4rem; font-weight: 600; line-height: 0.7; color: #9c0000; white-space: nowrap;}
+.title-home-page2 {font-size: 2.8rem; font-weight: 600; color: #464646; white-space: nowrap;}
+.home-page-desblo {width: 90%; margin-top: 1rem;}
+.home-page-description{font-size: 1.2rem; color: #5e5e5e;}
+.block-stylebtnhp {margin-top: 3rem;}
+.stylebtnhp {background-color:#ffffff; color: #414141; box-shadow: 0 5px 15px rgba(0,0,0,.25); border-radius: 1rem;width: 85%; height: 4rem; margin: 1rem 0rem; font-size: 2rem; font-weight: 600;}
+.stylebtnhp:hover {box-shadow: inset 0 0 15px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4), inset 0 2px 0 rgba(0,0,0,.1); background-color:rgb(240, 240, 240); font-size: 2rem;}
+.img-home-page {display: flex; width: 55%; height: 100%; align-items: flex-end;}
+.more-img{width: 100%;}
+/* 2 Страница */
+.btn-card-px {display: flex; flex-direction: column; align-items: center; width: 100%; height: 23rem; background-color: #ececec;}
+.btn-card-px2 {display: flex; flex-direction: row;}
+.title-nav-home {font-size: 2.6rem; font-weight: 600; color: #3f3f3f; margin-top: 1rem;}
+.btn-card {display: flex; flex-direction: row; justify-content: center; width: 100%; margin-top: 0.8rem;}
+.card1 {padding: 1.5rem 2rem;}
+.fish, .shrimp, .seafood, .crab, .caviar, .about {display: flex; flex-direction: row; align-items: center; justify-content: center; height: 170px; width: 170px; background-color: #ffffff; border-radius: 35%;box-shadow: 0 5px 15px rgba(0,0,0,.25), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1);}
+.fish:hover, .shrimp:hover, .seafood:hover, .crab:hover, .caviar:hover, .about:hover {box-shadow: inset 0 0 15px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4), inset 0 2px 0 rgba(0,0,0,.1); cursor: pointer; background-color:#f7f7f7;}
+.btn-img {height: 140px; width: 140px;}
+.namebtn {font-size: 1.1rem; font-weight: 600; padding-top: 8%; display: flex; justify-content: center;}
+/* 3 Страница */
+.product-top-px{display: flex; height: 56rem;}
+.product-top-px2{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.title-product-home1{font-size: 2.6rem; font-weight: 600; color: #3f3f3f; margin-bottom: 3rem;}
+
+
+/*################################################### Стили для (fish, caviar, crab, seafoot, shrimp)################################################### */
+.shop-general {display: flex; flex-direction: column; width: 100%;}
+.shop {display: flex; flex-direction: row; flex-wrap: wrap; width: 80%; margin: 0 auto;}
+.unit {display: flex; flex-direction: column; border-radius: 2%; height: 500px; width: 21%; margin: 2% 2%; border: 1px solid rgb(235, 235, 235);}
+.unit img {height: 100%; width: 100%; border-top-left-radius: 2%; border-top-right-radius: 2%;}
+.img-unit {height: 45%; width: 100%;}
+.text-unit {height: 9%; padding-left: 3%;}
+.nameUnit {font-size: 1.4rem; font-weight: 500;}
+.infotext {height: 25%; width: 100%; padding-left: 3%;}
+.infotext1{height: 33.3%; width: 100%;}
+.infotext2 {display: flex; flex-direction: row; height: 33.3%; width: 100%;}
+.infotext-main1 {width: 100%;}
+.rating-px{width: 100%; height: 33.3%;}
+.btn-unit {display: flex; flex-direction: row; height: 14%; width: 100%; padding: 1rem 0.5rem;}
+.btn-unit input {width: 20%;}
+.btn-unit button {width: 36%; margin-left: 5%;}
+.price {width: 34%; margin-left: 5%;font-size: 1.3rem; font-weight: 500; white-space: nowrap;}
+
+/* Рейтинг блок */
+.rating {display: flex;align-items: flex-end;font-size: 40px;line-height: 0.75;}
+.rating_body {position: relative;}
+.rating_body::before {content: "★★★★★";color: #b9adad;display: block;}
+.rating_active {position: absolute;width: 0%;height: 100%;top: 0;left: 0;overflow: hidden;}
+.rating_active::before {content: "★★★★★";position: absolute;width: 100%;height: 100%;top: 0;left: 0;color:#ffd300;}
+.rating_items {display: flex; position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+.rating_item {flex: 0 0 20%;height: 100%;opacity: 0;}
+.rating_value {font-size: 50%; line-height: 1; padding: 0px 0px 0px 10px;}
+/* Checbox с размерами продуктов */
+.yesno {width: 100%; height: 7%; display: flex; flex-direction: row;}
+.yesno .blockse {width: 100%; height: 100%; cursor:pointer; display: flex; justify-content: center; align-items: center;}
+.yesno input[type=radio] {display:none}
+.yesno input[type=radio]:checked + .blockse {background-color: #28a745; color: #ffffff;}
+/*################################################### Стили для "next" ###################################################*/
+.form-px {display: flex; flex-direction: column; width: 100%; height: 600px;}
+.form-reg, .form-auth {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 30%; height: 100%; margin: 3rem auto;}
+.name-reg {font-size: 1.7rem; font-weight: 500;}
+.form-reg .form-control, .form-auth .form-control {margin-top: 6%;}
+.btn-next {width: 40%; margin: 6% auto;}
+.form-btn {display: flex; flex-direction: row; width: 100%;}
+/*################################################### Стили для basket ###################################################*/
+.basket-px {display: flex; flex-direction: column; width: 100%;}
+.basket-name {font-size: 2.3rem; font-weight: 500; margin: 2rem; margin-left: 15%;}
+.basket-px2 {display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;}
+
+.form-basket {display: flex; flex-direction: column; align-items: center; width: 40%; max-height: 500px; min-height: 500px; overflow-y: scroll; border-radius: 1%; margin: 0px 3%;}
+.form-product {display: flex; flex-direction: row; width: 95%; min-height: 150px; max-height:150px; border-bottom: 1px solid rgb(219, 219, 219);}
+.form-product2 {width: 25%;display: flex; justify-content: center; align-items: center;}
+.form-product3 {width: 34%;display: flex; align-items: center; margin-left: 1rem; font-size: 1.2rem;}
+.form-product4 {width: 11%;display: flex; justify-content: center; align-items: center;}
+.form-product5 {width: 15%;display: flex; justify-content: center; align-items: center; font-size: 1.2rem;}
+.form-product6 {width: 15%;display: flex; justify-content: center; align-items: center; font-size: 1rem;}
+.product-in {width: 60%; height: 2.5rem;}
+
+.form-order {display: flex; flex-direction: column; width: 20%; height: 410px; border-radius: 1%;margin: 0px 3%;}
+.title-order {display: flex; flex-direction: row;height: 100px;justify-content: center;align-items: center;}
+.img-order {height: 75%; width: 25%;}
+.title-order1 {font-size: 1.8rem; font-weight: 400; margin-left: 5%;}
+.final-price-px {display: flex; justify-content: center; align-items: center; width: 100%; height: 300px;}
+.final-price-px2 {width: 80%; height: 200px;}
+.fontsize-1-1{font-size: 1.1rem;}
+.fontsize-1-6{font-size: 1.7rem; font-weight: 500;}
+.weight {display: flex; flex-direction: row; padding-bottom: 0.3rem;}
+.quantity {display: flex; flex-direction: row; padding-bottom: 0.5rem;}
+.final-price {display: flex; flex-direction: row; padding-bottom: 1rem;}
+.go-trimley {display: flex; flex-direction: row;}
+.promo-code {display: flex; flex-direction: row;}
+.btn-go-trimley {width: 100%; height: 3rem; margin-bottom: 1.5rem; font-size: 1.2rem;}
+.promo-code-in {width: 60%; height: 2.5rem;}
+.stylebtnpromo {width: 40%; border-radius: 0%; background-color: #ffffff;}
+.stylebtnpromo:hover {background-color:#c7c7c7;}
+
+.border-nik {border: 1px solid rgb(219, 219, 219);}
+.style-margin1 {margin-left: auto;}
+/*################################################### Стили для makingorder ###################################################*/
+.makingorder-px {display: flex; flex-direction: row; width: 100%; padding: 3rem 0; justify-content: center; align-items: center;}
+
+.form-makingorder {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 40%; height: 41rem; border-radius: 1%; padding: 0rem 3rem 1rem 3rem}
+.form-makingorder-beforeload{height: 100%; width: 100%; display: flex; flex-direction: column;}
+.form-makingorder *{outline: none;}
+.title-order-m {display: flex; justify-content: center; width: 100%;}
+.title-order-m2 {font-size: 1.6rem; font-weight: 600; margin: 0.5rem 0;}
+.form-makingorder div {margin: 0.3rem 0;}
+.input-text {height: 2.3rem; width: 100%; border: 1px solid rgb(148, 148, 148); border-radius: 0.5rem; font-size: 1.2rem;}
+textarea.input-text {min-height: 5rem; max-height: 6rem; padding: 0.5rem;}
+.input-text:focus {box-shadow: 0 0 1rem #d4d4d4;}
+.form_red{display: flex; flex-direction: column;}
+.form_red span {font-size: 1.1rem; margin-bottom: 0.2rem;}
+
+.form-order-making {display: flex; flex-direction: column; width: 20%; border-radius: 1%; margin-left: 5%;}
+.final-price-px-making {display: flex; justify-content: center; width: 100%;}
+.final-price-px-making2 {width: 80%;}
+.fontsize-1 {font-size: 1rem; font-weight: 200;}
+.stylebtnmak {background-color:#28a745; color: #ffffff; width: 100%; height: 3rem; margin: 1rem 0rem; font-size: 1.3rem;}
+.stylebtnmak:hover {color: #000000; background-color: #e6e6e6; border-color: #000000;}
+
+/* #################################################### */
+.preloader-order {
+  display: none;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #aaaaaa;
+  animation: preloader-5-spin 2s linear infinite;
+}
+.preloader-order:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #aaaaaa;
+  animation: preloader-5-spin 3s linear infinite;
+}
+.preloader-order:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #aaaaaa;
+  animation: preloader-5-spin 1.5s linear infinite;
+}
+@keyframes preloader-5-spin {
+  0%   {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.form-makingorder-afterload{text-align: center; display: none;}
+.spanorder{font-size: 1.3rem; line-height: 2.5rem;}
+.btnorder {width: 10rem; margin: 2rem; font-size: 1.2rem;}
+
+@media (min-width: 1500px) and (max-width: 1800px) {
+  .HomePage2{height: 40rem;}.text-home-page {width: 50%;}.text-home-page2 {margin: 7rem 0 0 5rem;}.img-home-page {width: 50%;}
+  .btn-card-px {height: 23rem;}.title-nav-home {margin-top: 0.8rem;}.btn-card {margin-top: 1rem;}
+  .shop {width: 95%;}.product-top-px{display: flex; height: 56rem;}
+  .form-order {width: 25%;}.form-basket {width: 40%;}
+  .form-makingorder {width: 50%;}
+}
+@media (min-width: 1300px) and (max-width: 1500px) {
+  .HomePage2{width: 95%; height: 40rem;}.text-home-page {width: 50%;}.text-home-page2 {margin: 5rem 0 0 5rem;}.img-home-page {width: 50%;}.title-home-page1 {font-size: 3.5rem;}.title-home-page2 {font-size: 2.4rem;}.home-page-description{font-size: 1.1rem;}
+  .btn-card-px {height: 20rem;}.title-nav-home {margin-top: 0.3rem;}.btn-card {margin-top: 0.1rem;}.fish, .shrimp, .seafood, .crab, .caviar, .about {height: 150px; width: 150px;}
+  .shop {width: 95%;}.unit {width: 23%; margin: 1% 1%;}.btn-unit button {width: 38%; margin-left: 5%;}.price {margin-left: 4%; width: 32%; font-size: 1.2rem; margin-top: 0.2rem;}
+  .form-reg, .form-auth {width: 40%;}
+  .form-order {width: 27%;}.form-basket {width: 50%;}
+  .form-makingorder {width: 55%;}.form-order-making {width: 25%;}.title-order-m2 {font-size: 1.4rem;}
+}
+@media (min-width: 1100px) and (max-width: 1300px){.shop {width: 85%;}}
+@media (min-width: 900px) and (max-width: 1100px){.shop {width: 99%;}}
+@media (min-width: 900px) and (max-width: 1300px) {
+  .HomePage2{width: 100%; height: 33rem;}.text-home-page2 {margin: 3rem 0 0 5rem;}.text-home-page {width: 50%;}.img-home-page {width: 50%;}.title-home-page1 {font-size: 2.8rem;}.title-home-page2 {font-size: 1.9rem;}.home-page-description{font-size: 1rem;}.block-stylebtnhp {margin-top: 2.5rem;}.stylebtnhp {width: 80%; height: 3.5rem; font-size: 1.7rem;}.stylebtnhp:hover {font-size: 1.7rem;}
+  .btn-card-px {height: 18rem;}.card1 {padding: 1.5rem 0.8rem;}.title-nav-home {margin-top: 0.3rem;}.btn-card {margin-top: 0.1rem;}.fish, .shrimp, .seafood, .crab, .caviar, .about {height: 120px; width: 120px;}.namebtn {font-size: 0.9rem;}.btn-img {height: 100px; width: 100px;}
+  .unit {width: 30.6%; margin: 1% 1%;}.btn-unit input {width: 24%;}.btn-unit button {width: 38%; margin-left: 5%;}.price {margin-left: 4%; width: 28%; font-size: 1.1rem; margin-top: 0.4rem;}.product-top-px{display: flex; height: 75rem;}
+  .form-reg, .form-auth {width: 50%;}
+  .form-order {width: 37%; margin: 0px 0.5%;}.form-basket {width: 60%; margin: 0px 0.5%;}.form-product3 {width: 30%;}.form-product6 {width: 19%;font-size: 0,8rem;}
+  .form-makingorder {width: 67%;}.form-order-making {width: 30%; margin-left: 2%;}.title-order-m2 {font-size: 1.4rem;}
+}
+@media (min-width: 677px) and (max-width: 900px) {
+  .HomePage2{width: 100%; height: 27rem;}.text-home-page2 {margin: 2rem 0 0 3rem;}.text-home-page {width: 50%;}.img-home-page {width: 50%;}.title-home-page1 {font-size: 2rem;}.title-home-page2 {font-size: 1.4rem;}.home-page-description{font-size: 0.9rem;}.block-stylebtnhp {margin-top: 2rem;}.stylebtnhp {width: 80%; height: 3.5rem; font-size: 1.3rem;}.stylebtnhp:hover {font-size: 1.3rem;}
+  .btn-card-px {height: 28rem;}.card1 {padding: 1rem 2rem;}.title-nav-home {margin-top: 0.3rem;}.btn-card {margin-top: 0.1rem;}.fish, .shrimp, .seafood, .crab, .caviar, .about {height: 130px; width: 130px;}.namebtn {font-size: 1rem;}.btn-img {height: 110px; width: 110px;}.btn-card-px2 {flex-direction: column;}.title-nav-home {font-size: 2rem;}
+  .unit {width: 45%; margin: 2.5% 2.5%;}.shop {width: 85%;}.btn-unit input {width: 24%;}.btn-unit button {width: 38%; margin-left: 5%;}.price {margin-left: 4%; width: 28%; font-size: 1.1rem; margin-top: 0.4rem;}.product-top-px{display: flex; height: 75rem;}
+  .form-reg, .form-auth {width: 65%;}
+  .basket-px2 {flex-direction: column;}.form-order {width: 55%; margin: 0px 0.5%;}.form-basket {width: 90%; margin: 2rem 0.5%;}
+  .makingorder-px {flex-direction: column;}.form-makingorder {width: 85%;}.form-order-making {width: 85%; margin: 2rem 0;}.title-order-m2 {font-size: 1.3rem;}
+}
+@media (min-width: 0px) and (max-width: 677px) {
+  .HomePage2{width: 100%; height: 27rem;}.text-home-page2 {margin: 2rem 0 0 3rem;}.text-home-page {width: 55%;}.img-home-page {width: 45%;}.title-home-page1 {font-size: 1.8rem;}.title-home-page2 {font-size: 1.4rem;}.home-page-description{font-size: 0.9rem;}.block-stylebtnhp {margin-top: 2rem;}.stylebtnhp {width: 80%; height: 3.5rem; font-size: 1.3rem;}.stylebtnhp:hover {font-size: 1.3rem;}
+  .btn-card-px {height: 21rem;}.card1 {padding: 1rem 1.2rem;}.title-nav-home {margin-top: 0.3rem;}.btn-card {margin-top: 0.1rem;}.fish, .shrimp, .seafood, .crab, .caviar, .about {height: 80px; width: 80px;}.namebtn {font-size: 0.7rem;}.btn-img {height: 65px; width: 65px;}.btn-card-px2 {flex-direction: column;}.title-nav-home {font-size: 2rem;}
+  .unit {width: 80%; margin: 10% 10%;}.shop {width: 100%;}.btn-unit input {width: 24%;}.btn-unit button {width: 38%; margin-left: 5%;}.price {margin-left: 4%; width: 28%; font-size: 1.1rem; margin-top: 0.4rem;}.product-top-px{display: flex; height: 150rem;}.title-product-home1{font-size: 2rem;color: #3f3f3f; margin-bottom: 2rem;}.block-stylebtnhp {display: none;}
+  .form-reg, .form-auth {width: 80%;}.btn-next {width: 70%; margin: 3% auto;}.form-btn {flex-direction: column; width: 100%;}
+  .basket-px2 {flex-direction: column;}.form-basket {width: 95%; overflow-x: scroll;}.form-order {width: 95%; margin: 1rem 0.5%;}.basket-name {font-size: 1.5rem;}.title-order1 {font-size: 1.1rem;}.form-product{min-width: 600px; max-width: 600px;}.form-basket {align-items: flex-start;}
+  .makingorder-px {flex-direction: column;}.form-makingorder {width: 95%; padding: 0rem 1.5rem 1rem 1.5rem}.form-order-making {width: 95%; margin: 2rem 0;}.title-order-m2 {font-size: 1.3rem;}
+}
+/*################################################### Стили для ClientProfile ###################################################*/
+.clientprofile-px{display: flex; width:  100%; justify-content: center;}
+.clientprofile-px2{display:flex; flex-direction: row; width: 80%; height: 46rem;}
+.orders-all{display:flex; flex-direction: column; justify-content: center; align-items: center; width: 65%;  height: 47rem;}
+.profile-and-chat{display:flex; flex-direction: column; justify-content: center; align-items: center; width: 35%;  height: 47rem;}
+
+.fcp{width: 85%; height: 39%; border-radius: 0.5rem; margin: 0.5rem;}
+.current-orders {display: flex; flex-direction: column; overflow-y: scroll;}
+.co-order{display: flex; flex-direction: row; width: 100%; border-bottom: 1px solid rgb(219, 219, 219);}
+
+.co-st{padding: 0.5rem;}
+.co-data {width: 15%;}
+.co-product{width: 50%;}
+.co-weight{width: 7%;}
+.co-cheque{width: 10%;}
+.co-status{width: 18%;}
+.co-wi{width: 100%;}
+
+.order-history {display: flex; flex-direction: column; overflow-y: scroll;}
+
+.profile-cook {display: flex; flex-direction: column;}
+.name-foto {display: flex; flex-direction: row; height: 7rem;}
+.name-pc-block {display: flex; justify-content: center; align-items: center; width: 70%;}
+.img-pc-block {width: 25%;}
+.name-pc {margin-left: 5px;}
+.img-pc {width: 80%;}
+
+.chat-admin {width: 80%;}
+.title-profile-client {font-size: 1.3rem; font-weight: 400;}
+/*################################################### Стили для ProfileAdmin ###################################################*/
+.adminprofile-px {display: flex; width: 100%; flex-direction: column; align-items: center;}
+.adminprofile {display: flex; width: 95%; height: 60rem; flex-direction: column; justify-content: center;}
+.ordercolumn{display: flex; flex-direction: column-reverse;}
+.ordercolumnhistory{display: flex; flex-direction: column;}
+.SAProf {display: flex; width: 100%; height: 45%; border-radius: 1rem; overflow-y: scroll;}
+.orderinprogress{display: flex; flex-direction: column;}
+.orderhistoryalladmin{display: flex; flex-direction: column;}
+.orderinprogressone {display: flex; flex-direction: row; border-bottom: 1px solid rgb(219, 219, 219); }
+.whoclient {width: 5%; border-right: 1px solid rgb(219, 219, 219);}
+.numemail {width: 15%; border-right: 1px solid rgb(219, 219, 219);}
+.deliverymethod {width: 5%; border-right: 1px solid rgb(219, 219, 219);}
+.customeraddress {width: 20%; border-right: 1px solid rgb(219, 219, 219);}
+.clientproducts {width: 20%; border-right: 1px solid rgb(219, 219, 219);}
+.weightsumA {width: 5%; border-right: 1px solid rgb(219, 219, 219);}
+.priceclient {width: 5%; border-right: 1px solid rgb(219, 219, 219);}
+.dataofcreation {width: 5%; border-right: 1px solid rgb(219, 219, 219);}
+.compleriondate {width: 10%; border-right: 1px solid rgb(219, 219, 219);}
+.managingstatus {width: 10%;}
+.infofield {width: 100%; font-size: 0.8rem;}
+.orderhistoryalladmin{display: flex;}
+.weight-disnon{display: none;}
+.option0{display:none;}
+.getval{margin-top: 9px; cursor: pointer; width: 99%; border-radius: 0.4rem; border: 1px solid #00000065; background-color: #ffffff; }
+.getval:hover{background-color: #e6e6e6;}
+.delord{margin-top: 9px; cursor: pointer; width: 99%; border-radius: 0.4rem; border: 1px solid #00000065; background-color: #ffffff;}
+.delord:hover{background-color: #ff0000; color: #ffffff;}
+.statusclass{height: 1.9rem;}
+.colorfirst{background-color: #e4ffea;}
+.colorsecond{background-color: #fbffdd;}
+.colorthree{background-color: #ffe2e2;}
+
+/* ### Тест чат ### */
+.chatpx{display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%; height: 747px;background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,0.200) 0%, rgba(12,16,204,0.200) 100%);}
+.nikchat{display: flex; flex-direction: column; width: 30%; height: 60%; background-color: rgba(255, 255, 255, 0.123); border-radius: 1rem;}
+.messagefield{display: flex; flex-direction: column; justify-content: flex-end; width: 100%; height: 80%; padding: 1rem 2rem;}
+.inputfield{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 20%;}
+.inputfield input{width: 85%; height: 2.5rem; background-color: #ffffff00; border: 1px solid #7070708c; border-radius: 0.5rem;}
+.btnmessage{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 3rem; height: 3rem;border-radius: 50%; margin-left: 1rem;}
+.btnmessage:hover{box-shadow: 0 5px 15px rgba(0, 70, 15, 0.342); cursor: pointer;}
+.btnmessage img{width: 3.1rem; height: 3.1rem;}
+.mastexttwo{margin: 0.3rem 0 0.3rem auto; border: 1px solid #7c7c7c7e; padding: 0.3rem 1rem; border-radius: 0.5rem;}
+.mastextone{margin: 0.3rem auto 0.3rem 0; border: 1px solid #7c7c7c7e; padding: 0.3rem 1rem; border-radius: 0.5rem;}
